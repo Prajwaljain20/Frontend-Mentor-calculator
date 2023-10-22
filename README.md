@@ -24,12 +24,12 @@ Users should be able to:
 - **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
 ### Screenshot
-
+![image](https://github.com/Prajwaljain20/Frontend-Mentor-calculator/assets/76695932/aab952b9-88d3-4ef3-b03e-67614a03d111)
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Github pages](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Prajwaljain20/Frontend-Mentor-calculator)
+- Live Site URL: [Github pages](https://prajwaljain20.github.io/Frontend-Mentor-calculator/)
 
 ## My process
 
