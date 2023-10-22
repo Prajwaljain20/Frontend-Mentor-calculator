@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+body {
+    font-size: 32px;
+}
+:root {
+    --backgroundColor: hsl(222, 26%, 31%);
+    --displayColor: hsl(224, 36%, 15%);
+    --keyBackgroundColor: hsl(223, 31%, 20%);
+    --blueKeyBackground: hsl(225, 21%, 49%);
+    --blueKeyHover: hsl(225, 21%, 60%);
+    --blueKeyShadow: hsl(224, 28%, 35%);
+    --redKeyBackground: hsl(6, 63%, 50%);
+    --redKeyHover: hsl(6, 63%, 70%);
+    --redKeyShadow: hsl(6, 70%, 34%);
+    --keyBackground: hsl(30, 25%, 89%);
+    --keyBackgroundHover: hsl(0, 0%, 100%);
+    --keyShadow: hsl(28, 16%, 65%);
+    --keyText: hsl(221, 14%, 31%);
+    --text: hsl(0, 0%, 100%);
+}
+[data-theme="theme2"] {
+    --backgroundColor: hsl(0, 0%, 90%);
+    --displayColor: hsl(0, 0%, 93%);
+    --keyBackgroundColor: hsl(0, 5%, 81%);
+    --blueKeyBackground: hsl(185, 42%, 37%);
+    --blueKeyShadow: hsl(185, 58%, 25%);
+    --redKeyBackground: hsl(25, 98%, 40%);
+    --redKeyShadow: hsl(25, 99%, 27%);
+    --keyBackground: hsl(45, 7%, 89%);
+    --keyBackgroundHover: hsl(0, 0%, 100%);
+    --keyShadow: hsl(35, 11%, 61%);
+    --keyText: hsl(60, 10%, 19%);
+    --text: hsl(0, 0%, 0%);
+}
+[data-theme="theme3"] {
+    --backgroundColor: hsl(268, 75%, 9%);
+    --displayColor: hsl(268, 71%, 12%);
+    --keyBackgroundColor: hsl(268, 71%, 12%);
+    --blueKeyBackground: hsl(281, 89%, 26%);
+    --blueKeyShadow: hsl(285, 91%, 52%);
+    --redKeyBackground: hsl(176, 100%, 44%);
+    --redKeyShadow: hsl(177, 92%, 70%);
+    --keyBackground: hsl(268, 47%, 21%);
+    --keyBackgroundHover: hsl(268, 47%, 50%);
+    --keyShadow: hsl(290, 70%, 36%);
+    --keyText: hsl(52, 100%, 62%);
+    --text: hsl(52, 100%, 62%);
+}
+body {
+    font-family: 'League Spartan', sans-serif;
+    background: var(--backgroundColor);
+}
+.header {
+    display: flex;
+    margin: 0 0 -60px 33%;
+    width: 550px;
+    height: 120px;
+    color: var(--text);
+    align-items: center;
+    gap: 330px;
+}
+.screen {
+    background: var(--displayColor);
+    margin-left: 33%;
+    width: 550px;
+    height: 120px;
+    border-radius: 10px;
+    text-wrap: nowrap;
+}
+.container {
+    background: var(--keyBackgroundColor);
+    width: 550px;
+    height: 470px;
+    margin: 20px 33%;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+.keys {
+    display: grid;
+    grid-template-columns: 120px 120px 120px 120px;
+    padding: 4px 35px;
+}
+.key {
+    background-color: var(--keyBackground);
+    color: var(--keyText);
+    width: 50px;
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px var(--keyShadow);
+    cursor: pointer;
+}
+.key:hover {
+    background-color: var(--keyBackgroundHover);
+}
+.keys:last-child {
+    grid-template-columns: 240px 240px;
+}
+.keys:last-child .key{
+    width: 170px;
+}
+.keys:last-child .key:last-child {
+    background-color: var(--redKeyBackground);
+    box-shadow: 0 4px var(--redKeyShadow);
+    color: hsl(0, 0%, 100%);
+}
+.keys:last-child .key:last-child:hover {
+    background-color: var(--redKeyHover);
+}
+.keys:first-child .key:last-child, .keys:last-child .key:first-child {
+    background-color: var(--blueKeyBackground);
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    box-shadow: 0 4px var(--blueKeyShadow);
+}
+h1 {
+    text-align: end;
+    padding-top: 35px;
+    color: var(--text);
+    overflow-x: auto;
+}
+h6 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: -300px;
+}
+.keys:first-child .key:last-child:hover, .keys:last-child .key:first-child:hover {
+    background-color: var(--blueKeyHover);
+}
+.toggle-container {
+    width: 70px;
+    height: 20px;
+    background-color: var(--keyBackgroundColor);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.toggle {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transform: translateX(0px);
+}
+.toggle:first-child {
+    margin-left: 6px;
+}
+.slider {
+    margin-left: 6px;
+    transition: all 0.5s;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--redKeyBackground);
+    cursor: pointer;
+}
+.slider:hover {
+    background: var(--redKeyHover);
+}
+.labels {
+    margin-top: -28px;
+}
+label {
+    margin-left: 9px;
+    font-size: 12px;
+    color: var(--text);
+}
+:-webkit-scrollbar-corner { background: rgba(0,0,0,0.5); }
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--keyBackgroundColor) var(--displayColor);
+}
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--keyBackgroundColor);
+    border-radius: 20px;
+    border: 1px solid var(--displayColor);
+}
+.attribution { font-size: 11px; text-align: center; position: fixed; bottom: 0; width: 100%;}
+.attribution a { color: hsl(228, 45%, 44%); }
+@media only screen and (max-width: 376px) {
+    body {
+        font-size: 24px;
+    }
+    .header {
+        margin: 0 0 -60px 6%;
+        gap: 130px;
+        width: 330px;
+    }
+    h6 {
+        font-size: 12px;
+        margin-right: -110px;
+    }
+    .screen {
+        margin-left: 4%;
+        width: 330px;
+        height: 90px;
+    }
+    .container {
+        width: 330px;
+        height: 410px;
+        margin: 20px 4%;
+        padding-top: 10px;
+    }
+    h1 {
+        padding-top: 25px;
+    }
+    .keys {
+        grid-template-columns: 80px 80px 80px 80px;
+        padding: 0 3px;
+    }
+    .key {
+        width: 45px;
+        height: 20px;
+        padding: 20px 10px;
+    }
+    .keys:last-child {
+        grid-template-columns: 160px 160px;
+    }
+    .keys:last-child .key{
+        width: 125px;
+    }
+    .labels {
+        margin-top: -22px;
+    }
+    .attribution {
+        position: relative;
+    }
+}
